@@ -76,10 +76,10 @@ public class Flight implements  PlaneReservation{
 
     @Override
     public boolean changePlaces(int sourcePlaceId, int destinationPlaceId) {
-        if(seats.get(sourcePlaceId)==null)return false;
-        else if(seats.get(destinationPlaceId)==null){
+        if(seats.get(sourcePlaceId).getUsername()==null && sourcePlaceId==destinationPlaceId)return false;
+
+        if(seats.get(destinationPlaceId).getUsername()==null){
             return seats.get(sourcePlaceId).getPlaceType() == seats.get(destinationPlaceId).getPlaceType();
-        }
-        else return false;
+        } else return false;
     }
 }

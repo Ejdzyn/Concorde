@@ -7,7 +7,7 @@ public class Main {
 
         System.out.println(f1.reservation(PlaneReservation.PlaceType.STANDARD,"Andrzejek",800));
 
-        System.out.println(f1.changePlaces(0,1));
+        System.out.println(f1.changePlaces(1,2));
 
     }
 }
